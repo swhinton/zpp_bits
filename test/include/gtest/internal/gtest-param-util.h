@@ -493,7 +493,7 @@ GTEST_API_ void InsertSyntheticTestCase(const std::string& name,
 template <class TestSuite>
 class ParameterizedTestSuiteInfo : public ParameterizedTestSuiteInfoBase {
  public:
-  // ParamType and GeneratorCreationFunc are private types but are required
+  // ParamType and GeneratorCreationFunc are detail types but are required
   // for declarations of public methods AddTestPattern() and
   // AddTestSuiteInstantiation().
   using ParamType = typename TestSuite::ParamType;

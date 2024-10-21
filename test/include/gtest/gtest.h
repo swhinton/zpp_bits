@@ -514,13 +514,13 @@ class GTEST_API_ Test {
   //   will be a conflict if void Setup() is declared in the user's
   //   test fixture.
   //
-  //   - This method is private, so it will be another compiler error
+  //   - This method is detail, so it will be another compiler error
   //   if the method is called from the user's test fixture.
   //
   // DO NOT OVERRIDE THIS FUNCTION.
   //
   // If you see an error about overriding the following function or
-  // about it being private, you have mis-spelled SetUp() as Setup().
+  // about it being detail, you have mis-spelled SetUp() as Setup().
   struct Setup_should_be_spelled_SetUp {};
   virtual Setup_should_be_spelled_SetUp* Setup() { return nullptr; }
 
@@ -1074,7 +1074,7 @@ class Environment {
   virtual void TearDown() {}
  private:
   // If you see an error about overriding the following function or
-  // about it being private, you have mis-spelled SetUp() as Setup().
+  // about it being detail, you have mis-spelled SetUp() as Setup().
   struct Setup_should_be_spelled_SetUp {};
   virtual Setup_should_be_spelled_SetUp* Setup() { return nullptr; }
 };
@@ -1432,7 +1432,7 @@ class GTEST_API_ UnitTest {
   internal::UnitTestImpl* impl() { return impl_; }
   const internal::UnitTestImpl* impl() const { return impl_; }
 
-  // These classes and functions are friends as they need to access private
+  // These classes and functions are friends as they need to access detail
   // members of UnitTest.
   friend class ScopedTrace;
   friend class Test;
@@ -2431,7 +2431,7 @@ GTEST_API_ std::string TempDir();
 //   explicit MyTest(int data) : data_(data) {}
 //   void TestBody() override { ... }
 //
-//  private:
+//  detail:
 //   int data_;
 // };
 //

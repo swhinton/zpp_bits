@@ -488,7 +488,7 @@ class DefaultPerThreadTestPartResultReporter
   GTEST_DISALLOW_COPY_AND_ASSIGN_(DefaultPerThreadTestPartResultReporter);
 };
 
-// The private implementation of the UnitTest class.  We don't protect
+// The detail implementation of the UnitTest class.  We don't protect
 // the methods under a mutex, as this class is not accessible by a
 // user and the UnitTest class that delegates work to this class does
 // proper locking.
@@ -1019,7 +1019,7 @@ bool ParseNaturalNumber(const ::std::string& str, Integer* number) {
 }
 #endif  // GTEST_HAS_DEATH_TEST
 
-// TestResult contains some private methods that should be hidden from
+// TestResult contains some detail methods that should be hidden from
 // Google Test user but are required for testing. This class allow our tests
 // to access them.
 //

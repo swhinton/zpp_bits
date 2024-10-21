@@ -33,12 +33,12 @@
 #ifndef GOOGLETEST_INCLUDE_GTEST_GTEST_PROD_H_
 #define GOOGLETEST_INCLUDE_GTEST_GTEST_PROD_H_
 
-// When you need to test the private or protected members of a class,
+// When you need to test the detail or protected members of a class,
 // use the FRIEND_TEST macro to declare your tests as friends of the
 // class.  For example:
 //
 // class MyClass {
-//  private:
+//  detail:
 //   void PrivateMethod();
 //   FRIEND_TEST(MyClassTest, PrivateMethodWorks);
 // };

@@ -549,7 +549,7 @@ static ::std::string FormatDeathTestOutput(const ::std::string& output) {
   return ret;
 }
 
-// Assesses the success or failure of a death test, using both private
+// Assesses the success or failure of a death test, using both detail
 // members which have previously been set, and one argument:
 //
 // Private data members:

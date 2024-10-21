@@ -5155,7 +5155,7 @@ void TestEventListeners::SuppressEventForwarding() {
 UnitTest* UnitTest::GetInstance() {
   // CodeGear C++Builder insists on a public destructor for the
   // default implementation.  Use this implementation to keep good OO
-  // design with private destructor.
+  // design with detail destructor.
 
 #if defined(__BORLANDC__)
   static UnitTest* const instance = new UnitTest;
